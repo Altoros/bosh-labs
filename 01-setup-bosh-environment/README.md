@@ -34,14 +34,17 @@ The second script will create Google Cloud service account
 Once we run this script it will prompt you to run following:
 ```
 bash -l
-bbl up
 ```
 
 We can validate that env variables where set by running following:
 ```
 env|grep -i bbl
-BBL_IAAS=gcp
-BBL_GCP_REGION=us-east1
+```
+
+Run BBL to create jumpbox and BOSH directo
+
+```
+bbl up
 ```
 
 Finally, add bbl config to current Shell

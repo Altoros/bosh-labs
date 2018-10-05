@@ -43,7 +43,6 @@ fi
 [ ! -f ~/.bashrc.bk ] && cp ~/.bashrc ~/.bashrc.bk
 grep -q '~/bin:' ~/.bashrc || echo -e 'export PATH=~/bin:$PATH' >> ~/.bashrc
 ## bbl
-echo alias ll='ls -l' >> ~/.bashrc
 echo export BBL_IAAS="gcp" >> ~/.bashrc
 echo export BBL_GCP_REGION="europe-west3" >> ~/.bashrc
 
