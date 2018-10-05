@@ -1,13 +1,7 @@
 #!/bin/bash
 set -e
 
-# get username for service account
-if [ -z "$1" ]; then
- echo "usage $0 <yourname>"
- exit
-else
-  SERVICE_ACCOUNT_NAME=$1
-fi
+SERVICE_ACCOUNT_NAME=${SERVICE_ACCOUNT_NAME:-baselbosh}
 
 GCP_PROJECT=$DEVSHELL_PROJECT_ID
 
