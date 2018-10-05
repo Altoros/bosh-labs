@@ -31,10 +31,8 @@ set +e
 set -e
 
 mkdir -p `pwd`/bbl-state
-export BBL_STATE_DIRECTORY=`pwd`/bbl-state
-export BBL_GCP_SERVICE_ACCOUNT_KEY=`pwd`/$SERVICE_ACCOUNT_NAME.key.json
+echo export BBL_STATE_DIRECTORY=`pwd`/bbl-state >> ~/.bashrc
+echo export BBL_GCP_SERVICE_ACCOUNT_KEY=`pwd`/$SERVICE_ACCOUNT_NAME.key.json >> ~/.bashrc
 
-echo "please run following commands to setup BBL env variables:\n
-export BBL_STATE_DIRECTORY=`pwd`/bbl-state\n
-export BBL_GCP_SERVICE_ACCOUNT_KEY=`pwd`/$SERVICE_ACCOUNT_NAME.key.json\n
-bbl up"
+echo "Done"
+echo -e "Now that all pre-work is done, we will need to do a few more things:\n\nbash -l"

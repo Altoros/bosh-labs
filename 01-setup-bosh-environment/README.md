@@ -23,7 +23,12 @@ cd bosh-labs/01-setup-bosh-environment
 ### deploy using bbl
 The below script will pull down remote dependencies from Debian repo, and other github projects. It will also update ~/.bashrc.
 ```
-./setup_bbl_bosh.sh
+./01-configure_jumpbox.sh
+```
+The second script will create Google Cloud service account
+
+```
+./02-configure_gcp.sh
 ```
 
 Once we run this script it will prompt you to run following:
@@ -32,10 +37,14 @@ bash -l
 bbl up
 ```
 
-
 We can validate that env variables where set by running following:
 ```
 env|grep -i bbl
 BBL_IAAS=gcp
 BBL_GCP_REGION=us-east1
+```
+
+Finally, add bbl config to current Shell
+```
+eval "$(bbl print-env)"
 ```
