@@ -2,10 +2,11 @@
 set -e
 
 # get username for service account
-if [ !$1 ]; then
+if [ -z "$1" ]; then
  echo "usage $0 <yourname>"
+ exit
 else
-  SERVICE_ACCOUNT_NAME = $1
+  SERVICE_ACCOUNT_NAME=$1
 fi
 
 GCP_PROJECT=$DEVSHELL_PROJECT_ID
@@ -35,5 +36,11 @@ set +e
   fi
 set -e
 
-## Prompt user to kick off login Shell
-echo -e "Now that all pre-work is done, we will need to do a few more things:\n\nbash -l\nbbl up"
+mkdir -p `pwd`/bbl-state
+export BBL_STATE_DIRECTORY=`pwd`/bbl-state
+export BBL_GCP_SERVICE_ACCOUNT_KEY=`pwd`/$SERVICE_ACCOUNT_NAME.key.json
+
+echo "please run following commands to setup BBL env variables:\n
+export BBL_STATE_DIRECTORY=`pwd`/bbl-state\n
+export BBL_GCP_SERVICE_ACCOUNT_KEY=`pwd`/$SERVICE_ACCOUNT_NAME.key.json\n
+bbl up"
