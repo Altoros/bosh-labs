@@ -510,7 +510,7 @@ bosh upload-stemcell https://bosh.io/d/stemcells/bosh-google-kvm-ubuntu-trusty-g
 Finally, everything is ready for deployment:
 
 ```exec
-bosh -d greeter -n  deploy greeter.yml
+bosh -d greeter -n deploy greeter.yml
 ```
 
 To list all your VMs, execute this command:

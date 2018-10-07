@@ -41,7 +41,7 @@ We can validate that env variables where set by running following:
 env|grep -i bbl
 ```
 
-Run BBL to create jumpbox and BOSH directo
+Run BBL to create jumpbox and BOSH director
 
 ```
 bbl up
@@ -50,4 +50,10 @@ bbl up
 Finally, add bbl config to current Shell
 ```
 eval "$(bbl print-env)"
+```
+
+Check bosh commands by running
+```
+bosh vms
+bosh releases
 ```
