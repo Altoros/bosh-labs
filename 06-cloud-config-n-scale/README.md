@@ -3,8 +3,8 @@
 ## Add external ip to your deployment
 First we will ask our IaaS for an IP.
 ```
-gcloud beta compute addresses create router-ip  --region=us-east1 --network-tier=PREMIUM
-gcloud beta compute addresses describe router-ip --region us-east1 --format json|jq -r '.address'
+gcloud beta compute addresses create router-ip  --region=europe-west3 --network-tier=PREMIUM
+gcloud beta compute addresses describe router-ip --region europe-west3 --format json|jq -r '.address'
 ```
 
 ### BOSH Cloud config

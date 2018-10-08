@@ -1,7 +1,7 @@
 # BOSH Addon's Exercise
 ### Change directories into ~/bosh-labs/04-bosh-addons/
 ```
-cd ~/bosh-labs/04-bosh-addons/
+cd ~/bosh-labs/05-bosh-addons/
 ```
 ### Create a runtime-config file called runtime.yml
 ```
