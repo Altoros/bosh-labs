@@ -31,9 +31,10 @@ bosh -d greeter -n deploy greeter.yml
 ```
 
 ### login to router and check config again
-
+```
 bosh -d greeter ssh router
 cat /var/vcap/jobs/router/config/config.yml
+```
 
 ### remove static ips from deployment manifest
 

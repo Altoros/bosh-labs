@@ -46,4 +46,13 @@ jobs:
       - 10.0.255.7:8080
 ```
 
-```bosh -d greeter -n deploy greeter.yml```
+```
+bosh -d greeter -n deploy greeter.yml
+```
+
+### check properties that properties on router job equal to removed upstreams from manifests
+
+```
+bosh -d greeter ssh router
+cat /var/vcap/jobs/router/config/config.yml
+```
